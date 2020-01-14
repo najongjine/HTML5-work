@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        table{
+           border-collapse: collapse;
+           border-spacing: 0;
+            width: 90%;
+            border: 1px solid blue;
+        }
+        table tr{
+            border: 1px dashed red;
+        }
+        table tr:hover{
+            background-color: gray;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <table border="1">
+        <tr>
+    <td>번호</td>
+    <td>이름</td>
+    <td>학과</td>
+</tr>
+        <tr><td>001</td>
+            <td>aaa</td>
+            <td>aaadp</td></tr>
+        <tr><td>002</td>
+            <td>성춘향</td>
+            <td>법학과</td></tr>
+            <tr><td>003</td>
+                <td>ㅊㅊㅊ</td>
+                <td>법학과</td>
+                <td>3</td></tr>
+             <tr><td rowspan="3">003</td></tr>
+             <tr> <td colspan="3">3</td></tr>
+             <tr> <td colspan="4">4</td></tr>
+             <tr> <td colspan="5">5</td></tr>
+             <tr>
+                 <td>1</td>
+                 <td>2</td>
+                 <td>3</td>
+                 <td><table>
+                    <tr><td>11</td></tr>
+                    <tr><td>12</td></tr>
+                 </table></td>
+             </tr>
+        
+    </table>
+</body>
+</html>

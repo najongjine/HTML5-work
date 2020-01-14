@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        *,html,body{
+            margin: 0;
+            padding: 0;
+        }
+        html{
+            height: 100%;
+        }
+        body{
+          /*  width: 978px; /* or 1200px in PC cuz of resolution diff*/
+          width: 90%;
+            overflow-y: auto;
+            height: 100%;
+            border: 1px solid green;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <style>
+        div.m-box{
+            border: 2px solid blue;
+            width:80%;
+            margin: 30px auto;
+            /*
+            .m-box를 flex-box의 container로 설정
+            */
+            display: flex;
+
+            /* flex-direction  row: 주측배열
+            colum:교차축 배열
+            */
+            flex-direction: row;
+            
+            /* 기본값이 nowrap 
+            컨테이너의 폭이 변동되면 item의 폭을 조절하여 한 라인에 있도록 배치
+
+            wrap 컨테이너의 폭이 변동되면 item을 줄바꿈하여 여러라인에 배치
+            */
+            flex-wrap: wrap;
+
+            /* direction과 wrap을 한꺼번에 지정할때*/
+            flex-flow: row wrap;
+        }
+        div#d-1{
+            /* item에 지정된 flex 값: item들을 배치할때 어떤 비율로 표시할가
+            default: auto*/
+            flex: 1;
+        }
+        div#d-2{
+            /*
+            flex:= flex-grow: 내용값에 따라 항목크기를 크게 할것인가?
+             flex-shrink: 내용값이 없으면 항목크기를 줄일것인가?
+             flex-basis: 크기를 줄이거나 늘릴때 어떤 기준으로 설정할것인가?
+              flex-basis */
+            flex: 2;
+        }
+        div#d-3{
+            flex: 3;
+        }
+        div.s-box{
+            border: 1px solid red;
+            width: 100px;
+            margin: 20px;
+        }
+        div#m-box-2{
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        div#s-1{
+            
+        }
+    </style>
+    <div class="m-box">
+        <div class="s-box" id="d-1">box tiem 1</div>
+        <div class="s-box" id="d-2">box tiem 2</div>
+        <div class="s-box" id="d-3">box tiem 3</div>
+        <div class="s-box" id="d-4">box tiem 4</div>
+        <div class="s-box" id="d-5">box tiem 5</div>
+    </div>
+
+    <div class="m-box" id="m-box-2">
+        <div class ="s-box" id="s-1">sub box</div>
+    </div>
+</body>
+</html>>
